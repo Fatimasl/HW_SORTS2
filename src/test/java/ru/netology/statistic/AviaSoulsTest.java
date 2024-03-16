@@ -56,13 +56,7 @@ public class AviaSoulsTest {
         Ticket[] actualArray = new Ticket[0];
         actualArray = aviaSouls.search("Москва", "Челябинск");
 
-        AviaSouls expectedaviaSouls = new AviaSouls();
-        expectedaviaSouls.add(item8);
-        expectedaviaSouls.add(item5);
-        expectedaviaSouls.add(item7);
-
-        Ticket[] expectedArray = new Ticket[0];
-        expectedArray = expectedaviaSouls.findAll();
+        Ticket[] expectedArray = {item8, item5, item7};
 
         Assertions.assertArrayEquals(expectedArray, actualArray);
     }
@@ -82,11 +76,7 @@ public class AviaSoulsTest {
         Ticket[] actualArray = new Ticket[0];
         actualArray = aviaSouls.search("Москва", "Курск");
 
-        AviaSouls expectedaviaSouls = new AviaSouls();
-        expectedaviaSouls.add(item4);
-
-        Ticket[] expectedArray = new Ticket[0];
-        expectedArray = expectedaviaSouls.findAll();
+        Ticket[] expectedArray = {item4};
 
         Assertions.assertArrayEquals(expectedArray, actualArray);
     }
@@ -106,10 +96,7 @@ public class AviaSoulsTest {
         Ticket[] actualArray = new Ticket[0];
         actualArray = aviaSouls.search("Курск", "Владивосток");
 
-        AviaSouls expectedaviaSouls = new AviaSouls();
-
-        Ticket[] expectedArray = new Ticket[0];
-        expectedArray = expectedaviaSouls.findAll();
+        Ticket[] expectedArray = {};
 
         Assertions.assertArrayEquals(expectedArray, actualArray);
     }
@@ -164,13 +151,7 @@ public class AviaSoulsTest {
         Ticket[] actualArray = new Ticket[0];
         actualArray = aviaSouls.searchAndSortBy("Москва", "Челябинск", ticketTimeComparator);
 
-        AviaSouls expectedaviaSouls = new AviaSouls();
-        expectedaviaSouls.add(item8);
-        expectedaviaSouls.add(item7);
-        expectedaviaSouls.add(item5);
-
-        Ticket[] expectedArray = new Ticket[0];
-        expectedArray = expectedaviaSouls.findAll();
+        Ticket[] expectedArray = {item8, item7, item5};
 
         Assertions.assertArrayEquals(expectedArray, actualArray);
     }
@@ -192,11 +173,7 @@ public class AviaSoulsTest {
         Ticket[] actualArray = new Ticket[0];
         actualArray = aviaSouls.searchAndSortBy("Челябинск", "Владивосток", ticketTimeComparator);
 
-        AviaSouls expectedaviaSouls = new AviaSouls();
-        expectedaviaSouls.add(item3);
-
-        Ticket[] expectedArray = new Ticket[0];
-        expectedArray = expectedaviaSouls.findAll();
+        Ticket[] expectedArray = {item3};
 
         Assertions.assertArrayEquals(expectedArray, actualArray);
     }
@@ -218,10 +195,7 @@ public class AviaSoulsTest {
         Ticket[] actualArray = new Ticket[0];
         actualArray = aviaSouls.searchAndSortBy("Уральск", "Владивосток", ticketTimeComparator);
 
-        AviaSouls expectedaviaSouls = new AviaSouls();
-
-        Ticket[] expectedArray = new Ticket[0];
-        expectedArray = expectedaviaSouls.findAll();
+        Ticket[] expectedArray = {};
 
         Assertions.assertArrayEquals(expectedArray, actualArray);
     }
